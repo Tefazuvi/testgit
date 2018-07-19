@@ -1,0 +1,44 @@
+/* base styles */
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  background-color: #BBB;
+  padding: 30px;
+}
+
+main {
+  padding: 30px;
+}
+
+main div div {
+  float: left;
+  width: 50%;
+}
+
+main > div {
+  background-color: yellow;
+}
+
+footer {
+  background-color: #888;
+  padding: 30px;
+}
+
+/**
+ * Clear fix
+ */
+ .cf::before,
+ .cf::after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf::after {
+     clear: both;
+ }
