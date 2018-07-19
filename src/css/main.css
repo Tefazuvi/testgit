@@ -1,4 +1,12 @@
 /* base styles */
+:root {
+  --padd: 30px;
+}
+
+* {
+  box-sizing:  border-box;
+}
+
 body {
   margin: 0;
 }
@@ -9,36 +17,50 @@ p {
 
 header {
   background-color: #BBB;
-  padding: 30px;
+  padding: var(--padd);
 }
 
 main {
-  padding: 30px;
-}
-
-main div div {
-  float: left;
-  width: 50%;
-}
-
-main > div {
-  background-color: yellow;
+  padding: var(--padd);
 }
 
 footer {
   background-color: #888;
+  padding: var(--padd);
+}
+
+/* Grid helpers */
+.col {
+  float: left;
   padding: 30px;
+  border: 1px solid black;
+}
+
+.col6 {
+  width: 50%;
+}
+
+.col3 {
+  width: 25%;
+}
+
+.col4 {
+  width: 33.33333333333333333%;
+}
+
+.col9 {
+  width: 75%;
 }
 
 /**
  * Clear fix
  */
- .cf::before,
- .cf::after {
+ .row::before,
+ .row::after {
      content: " "; /* 1 */
      display: table; /* 2 */
  }
  
- .cf::after {
+ .row::after {
      clear: both;
  }
